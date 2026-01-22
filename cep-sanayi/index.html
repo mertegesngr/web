@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cep Sanayim - Sanayi Cebine Gelsin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* GENEL AYARLAR */
+        :root {
+            --primary: #FF7F00; /* Senin logondaki o turuncu tonu */
+            --dark: #1E1E1E;    /* Uygulama arka planı */
+            --light: #F3F4F6;
+            --text-gray: #B0B0B0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* HERO BÖLÜMÜ (GİRİŞ) */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+            min-height: 80vh;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 127, 0, 0.3);
+        }
+
+        .hero-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-img img {
+            max-width: 300px;
+            border-radius: 30px;
+            border: 8px solid #333;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* ÖZELLİKLER */
+        .features {
+            background-color: #252525;
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--dark);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-gray);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* MOBİL UYUMLULUK */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 20px;
+            }
+            .hero-text {
+                padding-right: 0;
+                margin-top: 40px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">CEP SANAYİM</div>
+            </header>
+    </div>
+
+    <div class="container hero">
+        <div class="hero-text">
+            <h1>Sanayi Artık <br> <span>Cebinde!</span></h1>
+            <p>Aracınızın sorunu ne olursa olsun, konumunuza en yakın ustayı bulun, yorumları okuyun ve saniyeler içinde randevu alın.</p>
+            <a href="mailto:seninmailin@gmail.com" class="btn">Gelişmelerden Haberdar Ol</a>
+        </div>
+        <div class="hero-img">
+            <img src="app.png" alt="Cep Sanayim Uygulaması">
+        </div>
+    </div>
+
+    <section class="features">
+        <div class="container">
+            <h2>Neden Cep Sanayim?</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Konum Bazlı Hizmet</h3>
+                    <p>Size en yakın tamirci, akücü veya lastikçiyi harita üzerinde görün. Mesafe bilgisiyle vakit kaybetmeyin.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h3>Kolay Randevu</h3>
+                    <p>Telefon trafiğiyle uğraşmayın. Servislerin uygunluk durumunu görün ve tek tıkla randevunuzu oluşturun.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Güvenilir Ustalar</h3>
+                    <p> İşletmelerin puanlarını ve gerçek kullanıcı yorumlarını inceleyin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Cep Sanayim. Tüm Hakları Saklıdır.</p>
+        <p>Elbistan / Kahramanmaraş</p>
+    </footer>
+
+</body>
+</html>
